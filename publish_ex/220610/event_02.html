@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+        /* body의 기본 margin이 9px, border가 1px이므로 offset 좌표는 10 차이 */
+        /* container가 page보다 커서 스크롤이 생길 경우 client와 page의 좌표가 다름 */
+        .container{
+            width: 1000px;
+            height: 1000px;
+            border: 1px solid gray;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+            background-color: skyblue;
+        }
+    </style>
+    <script src="event_02.js"></script>
+</head>
+<body>
+    <h2 style="color: steelblue; background-color: lightcyan;"> Something good will happen to you today! </h2>
+    <section id="section1">
+        <div class="container">
+            <div class="box"></div>
+        </div>
+    </section>
+</body>
+</html>

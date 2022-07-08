@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let x,y;
+        // eval : 숫자형으로 변환
+        // parseInt : 정수형으로 변환
+        // parseFloat : 실수형으로 변환
+        mtd = prompt("숫자형/정수형/실수형", "입력하지 않으면 문자열로 인식");
+        if (mtd=="숫자형"){
+            x = eval(prompt("x값 입력", 0));
+            y = eval(prompt("y값 입력", 0));
+        } else if (mtd=="정수형"){
+            x = parseInt(prompt("x값 입력", 0));
+            y = parseInt(prompt("y값 입력", 0));
+        } else if (mtd=="실수형"){
+            x = parseFloat(prompt("x값 입력", 0));
+            y = parseFloat(prompt("y값 입력", 0));
+        } else {
+            x = prompt("x값 입력", 0);
+            y = prompt("y값 입력", 0);
+        }
+        alert(x + y);
+
+        let answer;
+        answer = confirm("정말로 삭제하시나요?"); // true or false
+        document.write(answer);
+        document.write("<br>");
+        if (answer) document.write("삭제되었습니다.");
+        else document.write("취소되었습니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

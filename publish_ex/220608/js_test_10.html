@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = 0;
+        function f1(){
+            let a = 1; // 지역변수로 설정됨
+            console.log("함수 안에서 호출 :", a);
+        }
+        f1()
+        // 함수 밖에서 선언하지 않은 경우 참조에러 발생('a is not defined')
+        console.log("함수 밖에서 호출 :", a);
+        
+        let b = 0;
+        function f2(){
+            b = 1; // 전역변수로 설정됨(hoisting; 변수의 메모리 공간을 미리 할당하는 것)
+            console.log("함수 안에서 호출 :", b);
+        }
+        f2()
+        console.log("함수 밖에서 호출 :", b);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

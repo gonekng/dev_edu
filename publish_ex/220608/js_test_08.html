@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let ar = ["HUMAN", "human", "Computer", "World"];
+        for (let i=0; i<ar.length; i++){
+            document.write(ar[i] + "<br>");
+        }
+        document.write("<br>");
+
+        for (i in ar){
+            document.write(i + ". " + ar[i] + "<br>");
+        } // python과 달리 i에는 인덱스 번호가 저장됨
+        document.write("<br>");
+
+        var ob = {"id":1, "title1":"human", "title2":"computer"};
+        for (a in ob){
+            document.write(a + ". " + ob[a] + "<br>");
+        } // json 데이터의 key 값이 a에 저장됨
+    </script>
+</head>
+<body>
+    ''
+</body>
+</html>

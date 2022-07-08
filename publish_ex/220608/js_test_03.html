@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nums = new Array();
+        nums.push(3);
+        nums.push(13);
+        nums.push(25);
+        console.log("nums : ", nums);
+
+        let n1 = nums.pop();
+        console.log("nums : ", nums);
+        console.log("n1 : ", n1);
+
+        let num2 = new Array(2,3,"hello",7);
+        console.log("num2 : ", num2);
+        let num3 = new Array(2,3,"hello",7,new Array(2,3,4));
+        console.log("num3[4] : ", num3[4]);
+        console.log("num3[4][1] : ", num3[4][1]);
+
+        var a = prompt('숫자 입력', '메시지를 입력해주세요');
+        if ( a == 1 ) {
+            num2.splice(2);                  // 3~4번째 요소 삭제
+            console.log("num2 : ", num2);    // [2,3]        } else if ( a == 2 ) {
+        } else if ( a == 2 ) {
+            num2.splice(2,1);                // 3번째 요소에서 1개만 삭제
+            console.log("num2 : ", num2);    // [2,3,7]
+        } else if ( a == 3) {
+            num2.splice(2,1,"HUMAN");        // 3번째 요소에서 1개만 삭제 후 HUMAN 삽입
+            console.log("num2 : ", num2);    // [2,3,"HUMAN",7]
+        } else {
+            num2.splice(2,0,"COMP");         // 3번째 요소에서 삭제 없이 COMP 삽입
+            console.log("num2 : ", num2);    // [2,3,"COMP","hello",7]
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

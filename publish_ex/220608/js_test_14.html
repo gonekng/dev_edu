@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printResult(){
+            let x, y;
+            x = eval(prompt("x값 입력하기", 0));
+            y = eval(prompt("y값 입력하기", 0));
+            btn.type = "text";
+            btn.value = x + y;
+        }
+        function init(){
+            // getElementById를 통해서 객체 생성 후 사용자 이벤트 처리
+            let printBtn = window.document.getElementById("btn");
+            printBtn.onclick = printResult;
+        }
+        window.onload = init;
+
+        // 위의 과정을 하나로 합칠 수 있음
+        /*
+        window.onload = function(){
+            let printBtn = window.document.getElementById("btn");
+            printBtn.onmousemove = function(){
+                // 마우스 커서 이동 시 실행 코드
+            };
+            printBtn.onclick = function(){
+                // 마우스 클릭 시 실행 코드
+            };
+        }
+        */
+    </script>
+</head>
+<body>
+    <input type="button" value="클릭" id="btn">
+</body>
+</html>

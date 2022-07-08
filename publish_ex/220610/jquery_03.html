@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="./css/jquery-3.6.0.min.js"></script> -->
+    <script>
+        $(function(){
+            // 단독 이벤트 적용
+            /*
+            $(".btn1 a").mouseover(function(){
+                alert("휴먼교육센터입니다!");
+            });
+            */
+
+            // 복수의 단독 이벤트 적용
+            /*
+            $(".btn1 a").on("mouseover focus", function(){
+                let ts = $(this); // 선택된 대상
+                ts.css("background-color", "yellowgreen");
+            });
+            $(".btn1 a").on("mouseout blur", function(){
+                let ts = $(this); // 선택된 대상
+                ts.css("background-color", "");
+            });
+            */
+
+            // 그룹 이벤트 적용
+            $(".btn1 a").on("click focus", function(){
+                let ts = $(this);
+                // 선택된 대상 다음의 ul 태그 중 visible이 포함되면 숨기기
+                $(".btn1").next("ul").hide();
+                // 선택된 대상의 부모(p 태그) 다음 태그를 보여주기
+                ts.parent().next().show();
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 style="color: steelblue;"> 제이쿼리 실씁실씁 </h1>
+    <p class="btn1"><a href="#">이벤트 대상1</a></p>
+    <ul style="display:none;">
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+    <p class="btn1"><a href="#">이벤트 대상2</a></p>
+    <ul style="display:none;">
+        <li>리스트4</li>
+        <li>리스트5</li>
+        <li>리스트6</li>
+    </ul>
+</body>
+</html>

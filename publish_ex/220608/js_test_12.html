@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printResult1(){
+            let x, y;
+            x = eval(prompt("x값 입력하기", 0));
+            y = eval(prompt("y값 입력하기", 0));
+            alert(x+y);
+        }
+        
+        function printResult2(){
+            let x, y;
+            x = eval(prompt("x값 입력하기", 0));
+            y = eval(prompt("y값 입력하기", 0));
+            btn1.value = x + y;
+            btn1.type = "text";
+        }
+    </script>
+</head>
+<body>
+    <a>인사하기</a>
+    <input type="button" value="클릭1" onclick="alert('안녕하세요');">
+    <input type="button" value="클릭2" onclick="printResult1();">
+    <input type="button" value="클릭3" onclick="printResult2();" id="btn1">
+    
+</body>
+</html>

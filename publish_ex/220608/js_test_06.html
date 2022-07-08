@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var exam1 = {id:1, title:"human"}; // JSON
+        var exam2 = {"id":1, "title":"human"}; // 가장 일반적인 JSON 형식
+        var exam3 = '{"id":1, "title":"human"}'; // JSON 데이터를 웹 페이지에서 전달받는 형식
+        console.log(exam3, typeof(exam3)); // 문자열 형태
+
+        let data1 = JSON.parse(exam3); // 문자열 파싱
+        console.log(data1);
+        console.log(data1["id"], typeof(data1["id"]));
+        console.log(data1["title"], typeof(data1["title"]));
+
+        // let data2 = JSON.parse(exam1); // 문자열이 아니므로 에러 발생
+        let data3 = JSON.stringify(exam2) // 문자열로 묶은 JSON 데이터
+        data3 = JSON.parse(data3);
+        console.log(data3);
+        console.log(data3["id"], typeof(data3["id"]));
+        console.log(data3["title"], typeof(data3["title"]));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

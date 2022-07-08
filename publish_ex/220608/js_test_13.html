@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printResult(){
+            let x, y;
+            x = eval(prompt("x값 입력하기", 0));
+            y = eval(prompt("y값 입력하기", 0));
+            btn1.type = "text";
+            btn1.value = x + y;
+        }
+        function init(){ // 변수 초기화 및 함수 호출
+            btn1.onclick = printResult;
+        }
+        window.onload = init; // HTML이 모두 로드된 이후에 init 함수를 실행
+    </script>
+</head>
+<body>
+    <input type="button" value="클릭" id="btn1">
+</body>
+</html>

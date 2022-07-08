@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            font-size: 40px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function click_page(file) {
+            fetch(file).then(function(response){
+                response.text().then(
+                    function(text) {
+                        document.querySelector('article').innerHTML = text;
+                    })
+            });
+        }
+    </script>
+</head>
+<body>
+    <ol>
+        <li><a onclick="click_page('HTML')">HTML</a></li>    
+        <li><a onclick="click_page('CSS')">CSS</a></li>
+        <li><a onclick="click_page('JAVASCRIPT')">JAVA Script</a></li>
+    </ol>
+    <article>
+    </article>    
+</body>
+</html>

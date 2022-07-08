@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let exam = new Object();
+        exam.kor = 90;
+        exam.eng = 95;
+        exam.math = 80;
+        console.log("average : ", (exam.kor + exam.eng + exam.math)/3);
+
+        let key = prompt('kor / eng / math', 'Write a subject name');
+        console.log(exam[key]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

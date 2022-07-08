@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+        .file-button{
+            display: none;
+        }
+        .file-trigger{
+            background-color: steelblue;
+            border: 1px solid skyblue;
+            border-radius: 5px;
+            padding: 5px 10px; /* 상하 5px, 좌우 10px */
+            color: white;
+            cursor: pointer; /* 버튼 위로 마우스가 올라가면 커서 포인터 */
+        }
+        .file-trigger:hover{
+            background-color: skyblue;
+        }   
+        </style>
+    <script src="trigger_01.js"></script>
+</head>
+<body>
+    <h2> Let's make a trigger!</h2>
+    <section id="section1">
+        <input type="file" class="file-button">
+        <span class="file-trigger">파일 선택</span>
+    </section>
+</body>
+</html>

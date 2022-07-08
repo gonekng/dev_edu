@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- JAVASCRIPT 문서를 읽으면, callbackme라는 함수를 호출해라. -->
+    <!-- fetch를 수행하는 동안 뒤의 코드가 먼저 실행되고 -->
+    <!-- fetch가 완료된 이후에 callbackme 함수가 실행된다. -->
+    <input type ="button" value = "click callbackMe" 
+        onclick="fetch('JAVASCRIPT').then(callbackme);
+                function callbackme(){
+                    console.log('response. OK!!');
+                };
+                console.log(1);
+                console.log(2);
+                console.log(3);
+                "
+    >
+    <!-- JAVASCRIPT 문서를 읽으면, response라는 변수에 담아와라. -->
+    <!-- response 변수의 text함수를 통해서 읽어온 값을 alert 해라.-->
+    <input type="button" value="click AJAX" 
+        onclick="fetch('HTML').then(function(response){
+                    response.text().then (
+                        function(text) {
+                            alert(text);
+                            console.log(response);
+                            console.log(response.ok);  // true, false
+                            console.log(response.status); // 200은 성공, 404는 페이지 못찾음
+                    })
+        });"
+    >
+    <!-- response.ok 값을 기반으로 error 처리 -->
+    <input type="button" value="click AJAX_ERROR처리" 
+        onclick=" let text;
+                    fetch('HTML').then(function(response){
+                    response.text().then (
+                        function(text) {
+                            if (response.ok) {
+                                // alert(text);
+                                document.querySelector('article').innerHTML=text;
+                                console.log('success');
+                            }
+                            else {
+                                console.log('ERROR');
+                            }
+                    })
+        });"
+    >
+    <article>
+
+    </article>
+
+</body>
+</html>

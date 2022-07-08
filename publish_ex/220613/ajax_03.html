@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            font-size: 40px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li><a onclick="
+            fetch('HTML').then(function(response){ // 파일명 'HTML'에서 내용을 가져옴
+                response.text().then(
+                    function(text) {
+                        document.querySelector('article').innerHTML = text;
+                    })
+            });">
+            HTML</a></li>    
+        <li><a onclick="
+            fetch('CSS').then(function(response){ // 파일명 'HTML'에서 내용을 가져옴
+                response.text().then(
+                    function(text) {
+                        document.querySelector('article').innerHTML = text;
+                    })
+            });">
+            CSS</a></li>
+        <li><a onclick="
+            fetch('JAVASCRIPT').then(function(response){ // 파일명 'HTML'에서 내용을 가져옴
+                response.text().then(
+                    function(text) {
+                        document.querySelector('article').innerHTML = text;
+                    })
+            });">
+            JAVA Script</a></li>
+    </ol>
+    <article>
+    </article>    
+</body>
+</html>
